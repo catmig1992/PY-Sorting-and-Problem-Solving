@@ -5,9 +5,10 @@ def merge_sort(lst):
     middle_index = len(lst) // 2
     left = lst[:middle_index]
     right = lst[middle_index:]
+    print(f"Left: {left}, Right: {right}")
     left_partition = merge_sort(left)
     right_partition = merge_sort(right)
-    print(f"Left: {left_partition}, Right: {right_partition}")
+    # print(f"Left: {left_partition}, Right: {right_partition}")
     return merge(left_partition, right_partition) 
 
 def merge(lst1, lst2):
