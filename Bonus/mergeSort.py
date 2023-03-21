@@ -7,6 +7,7 @@ def merge_sort(lst):
     right = lst[middle_index:]
     left_partition = merge_sort(left)
     right_partition = merge_sort(right)
+    print(f"Left: {left_partition}, Right: {right_partition}")
     return merge(left_partition, right_partition) 
 
 def merge(lst1, lst2):
@@ -16,6 +17,8 @@ def merge(lst1, lst2):
           results.append(lst1.pop(0))
       else: 
           results.append(lst2.pop(0))
+
+  print(f"Results: {results} -> lst1: {lst1}, lst2: {lst2}")
 
   return results + lst1 + lst2
 
